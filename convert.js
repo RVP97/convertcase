@@ -7,6 +7,8 @@ var saveTextFile = document.getElementById("save-text-file");
 var clear = document.getElementById("clear");
 var alternatingText = document.getElementById("alternating-text");
 var copy = document.getElementById("copy");
+var binary = document.getElementById("binary");
+var binaryToText = document.getElementById("binary-to-text");
 
 upperCase.addEventListener("click", function () {
   text.value = text.value.toUpperCase();
@@ -65,4 +67,22 @@ copy.addEventListener("click", function () {
   setTimeout(function () {
     copy.textContent = "Copy";
   }, 1000);
+});
+
+binary.addEventListener("click", function () {
+  text.value = text.value
+    .split("")
+    .map(function (char) {
+      return char.charCodeAt(0).toString(2);
+    })
+    .join(" ");
+});
+
+binaryToText.addEventListener("click", function () {
+  var binString = "";
+
+  text.value.split(" ").map(function (bin) {
+    binString += String.fromCharCode(parseInt(bin, 2));
+  });
+  text.value = binString;
 });
