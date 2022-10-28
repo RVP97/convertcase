@@ -1,0 +1,41 @@
+<!-- create a website that has a textarea and a button and when the button is pressed the text in the textarea is converted to upper case -->
+<!-- There is another button to convert to lowercase and another to capitalize the first letter of each sentence, there ia a button to clear the textarea, there is a button to copy to the clipboard -->
+<!-- insert a counter of the number of characters and words -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible"
+              content="ie=edge">
+        <title>Convierte tu texto</title>
+    </head>
+
+    <body style="text-align: center;">
+        <!-- insert a counter of the number of characters and words -->
+        <h1>Convert your text to different cases!</h1>
+        <div id="container">
+            <textarea id="text"
+                      cols="50"
+                      rows="20"></textarea>
+            <br>
+            <button id="upper-case">Upper Case</button>
+            <button id="lower-case">Lower Case</button>
+            <button id="proper-case">Proper Case</button>
+            <button id="sentence-case">Sentence Case</button>
+            <button id="save-text-file">Save Text File</button>
+            <button id="alternating-text">Alternating</button>
+            <button id="clear">Clear</button>
+            <button id="copy">Copy</button>
+        </div>
+        <script src="./convert.js"></script>
+    </body>
+
+</html>
+
+<!-- Path: 02-Stu_PCA/Solved/index.html -->
+<!-- create a website that has a textarea and a button and when the button
